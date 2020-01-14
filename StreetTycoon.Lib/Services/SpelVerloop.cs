@@ -12,7 +12,7 @@ namespace StreetTycoon.Lib.Services
     {
         private static readonly Random random = new Random();
 
-        const int winnersAantal = 2;
+        const int winnersAantal = 4;
 
         public Speler HuidigeSpeler { get; set; }
 
@@ -75,6 +75,17 @@ namespace StreetTycoon.Lib.Services
         {
             HuidigeSpeler.HuidigeStraat.Eigenaar = HuidigeSpeler;
             HuidigeSpeler.Saldo -= HuidigeSpeler.HuidigeStraat.Prijs;
+        }
+
+        public bool VoegStraatToe(Straat toeTeVoegen)
+        {
+            bool gelukt = false;
+            if (!StratenBeheer.Straten.Contains(toeTeVoegen))
+            {
+                StratenBeheer.Straten.Add(toeTeVoegen);
+                gelukt = true;
+            }
+            return gelukt;
         }
 
         public bool IsGameOver()

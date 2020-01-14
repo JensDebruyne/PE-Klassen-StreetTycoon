@@ -75,6 +75,16 @@ namespace StreetTycoon.Wpf
                 btnKopen.IsEnabled = false;
                 lblKoopInfo.Content = $"Je kan {game.HuidigeSpeler.HuidigeStraat} niet kopen.\nJouw saldo van € {game.HuidigeSpeler.Saldo} is ontoereikend";
             }
+            tbkFeedBack.Visibility = Visibility.Hidden;
+        }
+
+        void ToonMelding(string melding, bool isSucces = false)
+        {
+            tbkFeedBack.Visibility = Visibility.Visible;
+            tbkFeedBack.Text = melding;
+            tbkFeedBack.Background = isSucces == true ?
+                Brushes.Green :
+                Brushes.Red;
         }
 
         private void btnKopen_Click(object sender, RoutedEventArgs e)
@@ -94,6 +104,40 @@ namespace StreetTycoon.Wpf
         private void btnOpnieuw_Click(object sender, RoutedEventArgs e)
         {
             StartSpel();
+        }
+
+        private void btnVoegen_Click(object sender, RoutedEventArgs e)
+        {
+            decimal prijs = 0;
+            string naam = txtStraatNaam.Text;
+            try
+            {
+                prijs = decimal.Parse(txtPrijs.Text);
+                try
+                {
+                    Straat straat = new Straat(naam, prijs);
+                    if (game.VoegStraatToe(straat))
+                    {
+                        ToonMelding($"{straat} is toegevoegd", true);
+                        txtPrijs.Clear();
+                        txtStraatNaam.Clear();
+                        lstStraten.Items.Refresh();
+                    }
+                    else
+                    {
+                        ToonMelding("Deze straat bestaat al");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ToonMelding(ex.Message);
+                }
+            }
+            catch (Exception)
+            {
+                ToonMelding("Geef een geldige prijs in");
+            }
+
         }
     }
 }

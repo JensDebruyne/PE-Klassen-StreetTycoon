@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StreetTycoon.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="843" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="456" Width="800" Loaded="Window_Loaded">
 
     <Grid>
 
-        <ListBox x:Name="lstStraten" HorizontalAlignment="Left" Height="745" Margin="10,41,0,0" VerticalAlignment="Top" Width="268">
+        <ListBox x:Name="lstStraten" HorizontalAlignment="Left" Height="371" Margin="10,41,0,0" VerticalAlignment="Top" Width="268">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="Opacity" Value="0.5" />
@@ -26,19 +26,26 @@
                 </Style>
             </ListBox.ItemContainerStyle>
         </ListBox>
-        <Label Content="Speler:" HorizontalAlignment="Left" Margin="297,10,0,0" VerticalAlignment="Top" Width="47"/>
+        <Label Content="Speler:" HorizontalAlignment="Left" Margin="299,10,0,0" VerticalAlignment="Top" Width="47"/>
         <Label x:Name="lblSpeler" Content="" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top" Width="123"/>
 
-            <Button x:Name="btnGooien" Content="Gooi" HorizontalAlignment="Left" Margin="299,74,0,0" VerticalAlignment="Top" Width="75" Click="BtnGooien_Click"/>
-            <Label Content="Saldo:" HorizontalAlignment="Left" Margin="299,43,0,0" VerticalAlignment="Top" Width="48"/>
-            <Label x:Name="lblSaldo" Content="€ " HorizontalAlignment="Left" Margin="352,43,0,0" VerticalAlignment="Top" Width="127"/>
+        <Button x:Name="btnGooien" Content="Gooi" HorizontalAlignment="Left" Margin="299,74,0,0" VerticalAlignment="Top" Width="75" Click="BtnGooien_Click"/>
+        <Label Content="Saldo:" HorizontalAlignment="Left" Margin="299,43,0,0" VerticalAlignment="Top" Width="48"/>
+        <Label x:Name="lblSaldo" Content="€ " HorizontalAlignment="Left" Margin="352,43,0,0" VerticalAlignment="Top" Width="127"/>
 
         <Label Content="Straten:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="47"/>
         <Grid x:Name="grdKoopInfo" HorizontalAlignment="Left" Height="111" Margin="299,109,0,0" VerticalAlignment="Top" Width="483">
             <Label x:Name="lblKoopInfo" Content="" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="473" Height="51"/>
-            <Button x:Name="btnKopen" Content="Kopen" HorizontalAlignment="Left" Margin="0,66,0,0" VerticalAlignment="Top" Width="101" Height="32" Click="btnKopen_Click"/>
+            <Button x:Name="btnKopen" Content="Kopen" HorizontalAlignment="Left" Margin="0,66,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btnKopen_Click"/>
         </Grid>
         <Button x:Name="btnOpnieuw" Content="Opnieuw" HorizontalAlignment="Left" Margin="379,74,0,0" VerticalAlignment="Top" Width="75" Click="btnOpnieuw_Click"/>
+        <Label Content="Straatnaam" HorizontalAlignment="Left" Margin="297,263,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="txtStraatNaam" HorizontalAlignment="Left" Height="23" Margin="402,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Beheer straten" HorizontalAlignment="Left" Margin="299,225,0,0" VerticalAlignment="Top" Width="155" FontWeight="Bold"/>
+        <Label Content="Prijs" HorizontalAlignment="Left" Margin="299,306,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="txtPrijs" HorizontalAlignment="Left" Height="23" Margin="402,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnVoegen" Content="Toevoegen" HorizontalAlignment="Left" Margin="297,352,0,0" VerticalAlignment="Top" Width="75" Click="btnVoegen_Click"/>
+        <TextBlock x:Name="tbkFeedBack" HorizontalAlignment="Left" Height="117" Margin="542,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Background="#FFF3ECCD" Foreground="#FFFDFCFC" Padding="5"/>
 
     </Grid>
 </Window>

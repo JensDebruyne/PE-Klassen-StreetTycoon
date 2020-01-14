@@ -9,7 +9,7 @@ namespace StreetTycoon.Lib.Entities
 {
     public class Speler
     {
-        const decimal startBedrag = 1500M;
+        const decimal startBedrag = 500M;
         
         public string Naam { get; set; }
         public decimal Saldo { get; set; }
@@ -26,7 +26,7 @@ namespace StreetTycoon.Lib.Entities
 
         public override string ToString()
         {
-            return $"{Naam}: € {Saldo} - {HuidigePositie + 1}";
+            return $"{Naam} - Positie {HuidigePositie + 1}";
         }
 
     }

@@ -55,9 +55,15 @@ namespace StreetTycoon.Lib.Entities
             Prijs = BepaalPrijs();
         }
 
+        public Straat(string naam, decimal prijs) : this(Steden.Brugge, naam)
+        {
+            Stad = (Steden)random.Next(0, 3);
+            Prijs = prijs;
+        }
+
         decimal BepaalPrijs()
         {
-            decimal prijs = 0;
+            decimal prijs;
             int hondertal = random.Next(2, 6);
             prijs = hondertal * 100;
             return prijs;
@@ -65,7 +71,7 @@ namespace StreetTycoon.Lib.Entities
 
         public override string ToString()
         {
-            string info = "";
+            string info;
 
             if (Eigenaar == null)
             {
