@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreetTycoon.Wpf", "StreetTycoon.Wpf\StreetTycoon.Wpf.csproj", "{F50AA557-E066-418D-9EDD-A9447DCBF0B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreetTycoon.Lib", "StreetTycoon.Lib\StreetTycoon.Lib.csproj", "{575D6DA4-F1E7-434F-BC31-83BF062DFFB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F50AA557-E066-418D-9EDD-A9447DCBF0B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50AA557-E066-418D-9EDD-A9447DCBF0B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50AA557-E066-418D-9EDD-A9447DCBF0B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50AA557-E066-418D-9EDD-A9447DCBF0B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575D6DA4-F1E7-434F-BC31-83BF062DFFB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575D6DA4-F1E7-434F-BC31-83BF062DFFB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575D6DA4-F1E7-434F-BC31-83BF062DFFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575D6DA4-F1E7-434F-BC31-83BF062DFFB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86131789-EB6E-43F8-9A74-09E5C8FDA897}
+	EndGlobalSection
+EndGlobal

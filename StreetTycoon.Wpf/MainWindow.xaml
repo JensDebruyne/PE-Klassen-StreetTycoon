@@ -1,0 +1,44 @@
+﻿<Window x:Class="StreetTycoon.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StreetTycoon.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="843" Width="800" Loaded="Window_Loaded">
+
+    <Grid>
+
+        <ListBox x:Name="lstStraten" HorizontalAlignment="Left" Height="745" Margin="10,41,0,0" VerticalAlignment="Top" Width="268">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Opacity" Value="0.5" />
+                    <Setter Property="Opacity" Value="0.5" />
+                    <Setter Property="MaxHeight" Value="75" />
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Opacity" Value="1.0" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="Background" Value="Yellow" />
+                            <Setter Property="Foreground" Value="DarkBlue" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <Label Content="Speler:" HorizontalAlignment="Left" Margin="297,10,0,0" VerticalAlignment="Top" Width="47"/>
+        <Label x:Name="lblSpeler" Content="" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top" Width="123"/>
+
+            <Button x:Name="btnGooien" Content="Gooi" HorizontalAlignment="Left" Margin="299,74,0,0" VerticalAlignment="Top" Width="75" Click="BtnGooien_Click"/>
+            <Label Content="Saldo:" HorizontalAlignment="Left" Margin="299,43,0,0" VerticalAlignment="Top" Width="48"/>
+            <Label x:Name="lblSaldo" Content="€ " HorizontalAlignment="Left" Margin="352,43,0,0" VerticalAlignment="Top" Width="127"/>
+
+        <Label Content="Straten:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="47"/>
+        <Grid x:Name="grdKoopInfo" HorizontalAlignment="Left" Height="111" Margin="299,109,0,0" VerticalAlignment="Top" Width="483">
+            <Label x:Name="lblKoopInfo" Content="" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="473" Height="51"/>
+            <Button x:Name="btnKopen" Content="Kopen" HorizontalAlignment="Left" Margin="0,66,0,0" VerticalAlignment="Top" Width="101" Height="32" Click="btnKopen_Click"/>
+        </Grid>
+        <Button x:Name="btnOpnieuw" Content="Opnieuw" HorizontalAlignment="Left" Margin="379,74,0,0" VerticalAlignment="Top" Width="75" Click="btnOpnieuw_Click"/>
+
+    </Grid>
+</Window>
