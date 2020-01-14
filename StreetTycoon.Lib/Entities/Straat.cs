@@ -7,7 +7,7 @@ using StreetTycoon.Lib.Services;
 
 namespace StreetTycoon.Lib.Entities
 {
-    public enum Steden { Kortrijk, Gent, Brugge }
+    
 
     public class Straat
     {
