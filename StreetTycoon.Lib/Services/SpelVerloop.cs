@@ -79,13 +79,7 @@ namespace StreetTycoon.Lib.Services
 
         public bool VoegStraatToe(Straat toeTeVoegen)
         {
-            bool gelukt = false;
-            if (!StratenBeheer.Straten.Contains(toeTeVoegen))
-            {
-                StratenBeheer.Straten.Add(toeTeVoegen);
-                gelukt = true;
-            }
-            return gelukt;
+            return StratenBeheer.VoegStraatToe(toeTeVoegen);
         }
 
         public bool IsGameOver()

@@ -9,7 +9,7 @@ namespace StreetTycoon.Lib.Entities
 {
     public class Speler
     {
-        const decimal startBedrag = 500M;
+        const decimal startBedrag = 1500M;
         
         public string Naam { get; set; }
         public decimal Saldo { get; set; }

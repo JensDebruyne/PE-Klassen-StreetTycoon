@@ -37,17 +37,16 @@ namespace StreetTycoon.Lib.Services
             };
         }
 
-        public static Straat Zoek(int teZoekenId)
+        public static bool VoegStraatToe(Straat toeTeVoegen)
         {
-            Straat gezocht = null;
-            foreach (Straat straat in Straten)
+            bool gelukt = false;
+            if (!Straten.Contains(toeTeVoegen))
             {
-                if (straat.Id == teZoekenId)
-                {
-                    gezocht = straat;
-                }
+                Straten.Add(toeTeVoegen);
+                gelukt = true;
             }
-            return gezocht;
+            return gelukt;
         }
+
     }
 }

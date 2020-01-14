@@ -108,7 +108,7 @@ namespace StreetTycoon.Wpf
 
         private void btnVoegen_Click(object sender, RoutedEventArgs e)
         {
-            decimal prijs = 0;
+            decimal prijs;
             string naam = txtStraatNaam.Text;
             try
             {
