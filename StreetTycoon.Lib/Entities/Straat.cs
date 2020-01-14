@@ -7,7 +7,6 @@ using StreetTycoon.Lib.Services;
 
 namespace StreetTycoon.Lib.Entities
 {
-    
 
     public class Straat
     {
@@ -45,7 +44,7 @@ namespace StreetTycoon.Lib.Entities
 
         public Speler Eigenaar { get; set; }
 
-        public static int AantalStraten { get; set; } 
+        static int AantalStraten { get; set; } 
 
         public Straat(Steden stad, string naam)
         {
